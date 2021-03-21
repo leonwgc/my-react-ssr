@@ -1,0 +1,70 @@
+@import '~antd/dist/antd.less';
+@import (reference) './color.less';
+
+@font-face {
+  font-family: 'DINAlternate-Bold';
+  src: url(./DINAlternate.ttf);
+}
+
+html {
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: PingFangSC-Regular, 'helvetica neue', 'hiragino sans gb', arial, 'microsoft yahei ui',
+    'microsoft yahei', simsun, sans-serif;
+  background: #fff;
+  font-size: 14px;
+  color: @primary;
+  //padding-top: 64px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+ul,
+li {
+  list-style: none;
+}
+
+.clearfix {
+  &::before {
+    display: table;
+    content: '';
+  }
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
+.section-title {
+  font-size: 32px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(38, 38, 38, 1);
+  line-height: 32px;
+  text-align: center;
+}
+.page-wrapper {
+  min-width: 1180px;
+}
+
+a {
+  cursor: pointer;
+  color: @primary;
+  &:hover,
+  &.active {
+    color: @orange;
+  }
+}
+p,
+ul {
+  margin: 0;
+}
