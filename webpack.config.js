@@ -113,15 +113,9 @@ for (let srcModule of modules) {
     new HtmlWebpackPlugin(
       Object.assign(
         {
+          ...configObject[srcModule],
           filename: `${srcModule}.html`,
-          templateContent: ({ htmlWebpackPlugin }) =>
-            getHtmlTpl(
-              isUsingFlexH5,
-              htmlWebpackPlugin,
-              configObject[srcModule].title,
-              env,
-              srcModule
-            ),
+          templateContent: ({ htmlWebpackPlugin }) => getHtmlTpl(htmlWebpackPlugin, srcModule),
           inject: false,
           hash: false,
           chunks: [srcModule, 'vendor', 'common', 'runtime'],

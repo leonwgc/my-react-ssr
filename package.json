@@ -98,16 +98,11 @@
     "yargs": "^11.0.0"
   },
   "scripts": {
-    "start": "webpack-dev-server  --env dev --cfg",
+    "start": "webpack-dev-server  --env dev --cfg pc",
     "build:ssr": "webpack --config webpack.server.config.js --cfg",
     "build:csr": "webpack --env prd --cfg",
     "build": "yarn build:ssr pc && yarn build:csr pc",
-    "clear": "rm -rf ./dist && rm -rf ./t-dist && rm -rf ./dist-ssr && clear",
-    "upload:test": "node deploy/upload --env test",
-    "upload:prd": "node deploy/upload --env prd",
-    "build:pc:local": "yarn clear && yarn build:pc:ssr && webpack --cfg pc --env test --nocdn",
-    "server:t": "DEPLOY_ENV=test  NODE_ENV=production node --inspect app",
-    "server": "NODE_ENV=production node app"
+    "clear": "rm -rf ./dist && rm -rf ./t-dist && rm -rf ./dist-ssr && clear"
   },
   "browserslist": {
     "development": [

@@ -3,9 +3,8 @@ import './App.less';
 
 export default function App() {
   return (
-    <div className="page-404">
-      <div className="pic"></div>
-      <div className="txt">抱歉，您访问的页面走丢了</div>
+    <div className="page-home">
+      <div className="txt">hello,world</div>
     </div>
   );
 }

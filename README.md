@@ -14,6 +14,6 @@ function render() {
 
 4. 开发的时候可以忽略第一步， 只处理csr, 发布的时候可以考虑 以下3种情况：
 
-a. 很少更新的静态页面用 1+2 实现 prerender 
-b. 需要seo,又动态的页面，可以结合express/koa 动态调用 1生成的 commonjs模块动态返回 ssr
-c. 不考虑seo, 用csr也可以的， 可以动态处理2的html注入 ,  csr
+ >+ a. 很少更新的静态页面用 1+2 实现构建时 prerender 
+ >+ b. 需要seo的动态页面，可以结合express/koa 动态调用 1生成的 commonjs模块动态返回, 实现ssr
+ >+ c. 不考虑seo, 用csr也可以的， 可以动态处理2的html注入 ,  实现csr

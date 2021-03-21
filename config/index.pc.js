@@ -1,7 +1,9 @@
 module.exports = {
   home: {
     title: 'title',
-    keywords: 'keywords',
-    desc: `desc`,
+    meta: {
+      keywords: 'keywords',
+      description: `description`,
+    },
   },
 };
