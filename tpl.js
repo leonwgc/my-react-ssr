@@ -3,12 +3,15 @@ const fs = require('fs');
 
 module.exports = function (htmlWebpackPlugin, currentModule) {
   let renderer = {};
+  // 这里引用实现prerender , 放在express/koa里面引用实现 ssr , 不引用则是通常的csr
   if (fs.existsSync(path.resolve('./dist-ssr/index.js'))) {
     try {
       renderer = require('./dist-ssr').default;
     } catch (ex) {}
   }
 
+  // 如果需要ssr , body可以定义一个ejs 插值表达式 e.g.  <%-body%> ,由ejs render注入 
+  // 包括后面的状态注入， window.app={} // window.app=<%- initialState%>
   let body = '';
   if (typeof renderer[currentModule] === 'function') {
     body = renderer[currentModule]();
