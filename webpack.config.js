@@ -76,7 +76,7 @@ const resolveAlias = {
 
 function getPublicPath() {
   if (isMkt) {
-    return `https://static.zuifuli.com/${env}/mkt/${repoName}/`;
+    return `https://static.company.com/${env}/mkt/${repoName}/`;
   }
   return useCDN ? `https://static.company.com/${env}/${repoName}/` : '';
 }

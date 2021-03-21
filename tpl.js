@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = function (isFlex, htmlWebpackPlugin, title, env, currentModule) {
-  let renderer;
+  let renderer = {};
   if (fs.existsSync(path.resolve('./dist-ssr/index.js'))) {
     try {
       renderer = require('./dist-ssr').default;

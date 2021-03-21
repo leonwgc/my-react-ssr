@@ -3,4 +3,4 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import '~/pc-common/base.less';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.hydrate(<App />, document.getElementById('root'));
