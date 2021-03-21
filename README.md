@@ -1,5 +1,5 @@
 # my-react-ssr
-react ssr demo,
+react ssr 服务端渲染架构
  
 1. webpack.server.config.js 打包ssr.js为commonjs模块, 导出一个对象，key为src目录下模块目录名，value为
 模块目录里面index.ssr.js导出的render函数
